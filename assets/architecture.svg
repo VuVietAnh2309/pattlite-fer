@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="272" viewBox="0 0 1200 272" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/></marker><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d2ff"/><stop offset=".55" stop-color="#a855f7"/><stop offset="1" stop-color="#00f5a0"/></linearGradient></defs>
+<rect x=".5" y=".5" width="1199" height="271" rx="14" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="0" y="0" width="1200" height="4" rx="2" fill="url(#g)"/>
+<text x="40" y="46" font-size="22" font-weight="700" fill="#1f2328">PATTLite</text>
+<text x="150" y="46" font-size="14" fill="#57606a">Lightweight attention-based CNN for facial expression recognition on edge devices</text>
+<rect x="35.0" y="92" width="122" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="96.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">Input</text>
+<text x="96.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">120×120×3</text>
+<text x="96.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">face crop</text>
+<line x1="160.0" y1="148.0" x2="176.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="179.0" y="92" width="122" height="112" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+<text x="240.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">Augment</text>
+<text x="240.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">resize 224</text>
+<text x="240.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">flip · contrast</text>
+<line x1="304.0" y1="148.0" x2="320.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="323.0" y="92" width="122" height="112" rx="10" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.2"/>
+<text x="384.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">MobileNet</text>
+<text x="384.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">ImageNet weights</text>
+<text x="384.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">truncated @ −29</text>
+<text x="384.0" y="190" text-anchor="middle" font-size="11.5" fill="#57606a">frozen → fine-tune</text>
+<line x1="448.0" y1="148.0" x2="464.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="467.0" y="92" width="122" height="112" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+<text x="528.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">Patch Extraction</text>
+<text x="528.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">SepConv 4×4 /4</text>
+<text x="528.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">SepConv 2×2 /2</text>
+<text x="528.0" y="190" text-anchor="middle" font-size="11.5" fill="#57606a">Conv 1×1 · 256</text>
+<line x1="592.0" y1="148.0" x2="608.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="611.0" y="92" width="122" height="112" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+<text x="672.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">GAP</text>
+<text x="672.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">global avg</text>
+<text x="672.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">pool + dropout</text>
+<line x1="736.0" y1="148.0" x2="752.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="755.0" y="92" width="122" height="112" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+<text x="816.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">Pre-classifier</text>
+<text x="816.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">Dense 32</text>
+<text x="816.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">BatchNorm</text>
+<line x1="880.0" y1="148.0" x2="896.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="899.0" y="92" width="122" height="112" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+<text x="960.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">Self-Attention</text>
+<text x="960.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">scaled</text>
+<text x="960.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">dot-product</text>
+<line x1="1024.0" y1="148.0" x2="1040.0" y2="148.0" stroke="#8c959f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1043.0" y="92" width="122" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="1104.0" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">Softmax</text>
+<text x="1104.0" y="150" text-anchor="middle" font-size="11.5" fill="#57606a">8 expression</text>
+<text x="1104.0" y="170" text-anchor="middle" font-size="11.5" fill="#57606a">classes</text>
+<rect x="40" y="235" width="14" height="14" rx="3" fill="#f3e8ff" stroke="#a855f7"/>
+<text x="62" y="246" font-size="12" fill="#57606a">PATTLite-specific blocks</text>
+<rect x="238" y="235" width="14" height="14" rx="3" fill="#e0f2fe" stroke="#7dd3fc"/>
+<text x="260" y="246" font-size="12" fill="#57606a">pretrained backbone</text>
+<rect x="401" y="235" width="14" height="14" rx="3" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="423" y="246" font-size="12" fill="#57606a">standard layers</text>
+<text x="1160" y="246" text-anchor="end" font-size="12" fill="#57606a">Two-phase training: frozen backbone (1e-3) → unfreeze last 59 layers (1e-5)</text>
+</svg>

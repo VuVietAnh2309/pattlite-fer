@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "PATTLite: lightweight attention-based CNN for facial expression recognition"
+type: software
+license: MIT
+version: 1.0.0
+date-released: 2026-11-23
+repository-code: "https://github.com/VuVietAnh2309/pattlite-fer"
+authors:
+  - family-names: Vu
+    given-names: Viet Anh
+    orcid: "https://orcid.org/0009-0006-6977-5922"
+    affiliation: Hanoi University of Science and Technology
+keywords:
+  - facial expression recognition
+  - lightweight CNN
+  - attention
+  - edge AI
+preferred-citation:
+  type: article
+  title: "Enhancing facial expression recognition with lightweight attention-based CNN"
+  journal: "Journal of Ambient Intelligence and Humanized Computing"
+  publisher:
+    name: Springer
+  year: 2026
+  doi: "10.1007/s12652-026-05116-0"
+  authors:
+    - family-names: Vu
+      given-names: Viet Anh
+    - family-names: Pham
+      given-names: Gia Khanh
+    - family-names: Tran
+      given-names: Quy Nam
+    - family-names: Do
+      given-names: Son Tung
+    - family-names: Pham
+      given-names: Danh Tuyen
+    - family-names: Pham
+      given-names: Van Hai
